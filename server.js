@@ -13,6 +13,22 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
 
+app.get('/gratitude-list', (req, res) => {
+    res.sendFile(__dirname + '/views/gratitude-list.html');
+});
+
+app.get('/day-plan', (req, res) => {
+    res.sendFile(__dirname + '/views/day-plan.html');
+});
+
+app.get('/love-notes', (req, res) => {
+    res.sendFile(__dirname + '/views/love-notes.html');
+});
+
+app.get('/meditation', (req, res) => {
+    res.sendFile(__dirname + '/views/meditation.html');
+});
+
 // both run and close server access the same server object
 // so "server" is declared here and when runServer runs 
 // it is assigned its value
