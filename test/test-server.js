@@ -1,6 +1,7 @@
+'use strict';
+
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-
 const {app, runServer, closeServer} = require('../server');
 
 const expect = chai.expect;
@@ -12,7 +13,7 @@ chai.use(chaiHttp);
 
 // integration test for http calls
 // test GET request to see if 200 status is returned and index.html
-describe('/', function(){
+describe('index.html page', function(){
     before(function() {
         return runServer();
     });
