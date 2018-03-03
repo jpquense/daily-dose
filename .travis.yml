@@ -1,0 +1,9 @@
+language: node_js
+node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: C9faiqyAv3mtHXue5CY92a0t+5jnXdl4l7bvyNqr1Tw5lL02ye3Q9PDyn9b2v9z0HNzvc6D4fnpRX4pLfXpkbU5BU4P3DgsKPBo/cu79Hu5sZCL0bOd5irFhcdHSNz94YssAjn8zGSzZvY5ZW7kUR56f1D3jmY/QYnnfa0bbGEAoKDJmDxcMP4fhDi7+jrJ/96PHCYSp2N2akGBXLau8cAd7Pvoyn22e/bwKfy5negmETZ/IBXld1jV6aLZd2K2+YoJFqS2caLd9tgpvzbTwhS0Q3WzHt4e5kr3zd+gHlvHnnpAUqAT//ktvbr4etq9F5nVQsrkEH9YVgJiiYj0ZhmHkNH5ALf4v80yebyrr5scIFiVjC7NHXndpvlodH4cgMsOWxzgUc/lUi0/iRRo11wEfZTomdplF/uXpy8qwEA+kBniFyYD6IY0+3GYQS2SjczI6Hzm5ZiSL+tWlJi3uwpWCIlN8KMbE7Fw8ESo3J1mMWzsV2dXZs3gCPZ180pCwoJEXdUsuTtVGaPdgA/74Jjj+1ey6UIoQUPJM8bD8EI9UtE2ZOAAL7p8eL4YZb2BnBGcDNtNjWB6/uoNlMw3OMhYxUiEh6Fv1M3+G7BL19J2GZC70PieILiNif73SQ8vST+x24SinwCLMK+ll9zaruDshv3AkxmOd9gRfHDrlDS4=
+  app: peaceful-dawn-56826
+  on:
+    repo: jpquense/first-things-first
