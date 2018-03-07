@@ -34,8 +34,11 @@ const MOCK_DATA = {
             "date": "May 3, 2018",
             "publishedAt": 1470009976609
         }
-    ],
-    "goalList": [
+    ]
+};
+
+const MOCK_DATA_GOALS = {
+    "goals": [
         {
             "id": "1111111",
             "plan1": "I am going to work 5 hrs",
@@ -68,65 +71,54 @@ const MOCK_DATA = {
             "date": "December 2, 2018",
             "publishedAt": 1470009976609
         }
-    ],
-    "loveNotes": [
+    ]
+};
+
+const MOCK_DATA_USERS = {
+    "users": [
         {
             "id": "1111111",
-            "note1": "Let my teacher have all the happiness in the world",
-            "note2": "Let my teacher have all the happiness in the world",
-            "note3": "Let my teacher have all the happiness in the world",
-            "date": "May 3, 2018",
-            "publishedAt": 1470016976609
+           "name": {
+               "first-name": "John",
+               "last-name": "Smith"
+           },
+           "gender": "Male",
+            "bithday": "June 6, 2018",
+            "reason-joined": "I have such a hard time prioritizing my life",
+            "joined": 1470016976609
         },
         {
-            "id": "2222222",
-            "note1": "Bless that guy who cut me off at work with all the pizza he wants",
-            "note2": "Bless that guy who cut me off at work with all the pizza he wants",
-            "note3": "Bless that guy who cut me off at work with all the pizza he wants",
-            "date": "May 3, 2018",
-            "publishedAt": 1470012976609
+            "id": "222222",
+           "name": {
+               "first-name": "John",
+               "last-name": "Smith"
+           },
+           "gender": "Male",
+            "bithday": "June 6, 2018",
+            "reason-joined": "I have such a hard time prioritizing my life",
+            "joined": 1470016976609
         },
         {
             "id": "333333",
-            "note1": "Bless my wife with a fun day",
-            "note2": "Bless my wife with a fun day",
-            "note3": "Bless my wife with a fun day",
-            "date": "May 3, 2018",
-            "publishedAt": 1470011976609
+           "name": {
+               "first-name": "John",
+               "last-name": "Smith"
+           },
+           "gender": "Male",
+            "bithday": "June 6, 2018",
+            "reason-joined": "I have such a hard time prioritizing my life",
+            "joined": 1470016976609
         },
         {
-            "id": "4444444",
-            "note1": "Let my boss have a lovely evening with his family",
-            "note2": "Let my boss have a lovely evening with his family",
-            "note3": "Let my boss have a lovely evening with his family",
-            "date": "May 3, 2018",
-            "publishedAt": 1470009976609
-        }
-    ],
-    "meditations": [
-        {
-            "id": "1111111",
-            "one-minute": "FILE WITH AUDIO TRACK",
-            "two-minute": "FILE WITH AUDIO TRACK",
-            "three-minute": "FILE WITH AUDIO TRACK",
-        },
-        {
-            "id": "2222222",
-            "one-minute": "FILE WITH AUDIO TRACK",
-            "two-minute": "FILE WITH AUDIO TRACK",
-            "three-minute": "FILE WITH AUDIO TRACK",
-        },
-        {
-            "id": "333333",
-            "one-minute": "FILE WITH AUDIO TRACK",
-            "two-minute": "FILE WITH AUDIO TRACK",
-            "three-minute": "FILE WITH AUDIO TRACK",
-        },
-        {
-            "id": "4444444",
-            "one-minute": "FILE WITH AUDIO TRACK",
-            "two-minute": "FILE WITH AUDIO TRACK",
-            "three-minute": "FILE WITH AUDIO TRACK",
+            "id": "444444",
+           "name": {
+               "first-name": "John",
+               "last-name": "Smith"
+           },
+           "gender": "Male",
+            "bithday": "June 6, 2018",
+            "reason-joined": "I have such a hard time prioritizing my life",
+            "joined": 1470016976609
         }
     ]
 };

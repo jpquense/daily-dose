@@ -1,5 +1,8 @@
 'use strict';
 
+// talk about jwt with mentor
+// add users and login and authenticated
+
 const express = require('express');
 const morgan = require('morgan');
 
@@ -10,24 +13,24 @@ app.use(morgan('common'));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html');
+    res.sendFile(__dirname + '/public/login.html');
 });
 
-app.get('/gratitude-list', (req, res) => {
-    res.sendFile(__dirname + '/views/gratitude-list.html');
-});
+// app.get('/login', (req, res) => {
+//     res.sendFile(__dirname + '/login.html');
+// });
 
-app.get('/day-plan', (req, res) => {
-    res.sendFile(__dirname + '/views/day-plan.html');
-});
+// app.get('/home', (req, res) => {
+//     res.sendFile(__dirname + '/home.html');
+// });
 
-app.get('/love-notes', (req, res) => {
-    res.sendFile(__dirname + '/views/love-notes.html');
-});
+// app.get('/gratitudes', (req, res) => {
+//     res.sendFile(__dirname + '/gratitudes.html');
+// });
 
-app.get('/meditation', (req, res) => {
-    res.sendFile(__dirname + '/views/meditation.html');
-});
+// app.get('/goals', (req, res) => {
+//     res.sendFile(__dirname + '/goals.html');
+// });
 
 // both run and close server access the same server object
 // so "server" is declared here and when runServer runs 
