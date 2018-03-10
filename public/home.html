@@ -17,18 +17,49 @@
         </header>
         <main>
             <section class="row">
-                <h2 class="col-12">Get your daily dose of gratitude and direction!</h2>
-                <button><a href="/gratitudes.html">Start</a></button>
+                <p class="col-12">Get your daily dose of gratitude and direction!</p>
+                <a href="/gratitudes.html"><button>Start</button></a>
                 <p class="col-12">Press start to begin and follow along. Change begins now!</p>
-            </section> 
+            </section>
+            <section class="counter row">
+                <div class="counter-left col-6">
+                    <button class="js-gratitude-btn">View my Gratitudes</button>
+                </div>
+                <div class="counter-right col-6">
+                    <button class="js-goals-btn">View my goals</button>
+                </div>
+            </section>           
         </main>
-        <footer class="row">
+        <section>
+            <div class="js-modal modal centered">
+                <!-- <header>
+                    <h2 class="js-modal-header">####</h2>
+                </header>
+                <div class="modal-body row">
+                    <div class="count col-12">
+                        <p class="js-list-length"> <span class="js-count">#</span></p>
+                    </div>
+                    <form class="count">
+                       <label class="col-4" for="gratitudes">How many gratitudes do you want to view?</label>
+                       <input class="col-4" type="number" name="gratitudes" id="gratitudes">
+                       <button class="col-4 js-modal-btn-max" type="submit" min="0" max="0">Get Gratitudes</button>
+                    </form>
+                    <div class="js-grat-list">
+
+                    </div>
+                </div>
+                <footer>
+                    <button class="js-modal-btn-close">Close</button>
+                </footer> -->
+            </div>
+        </section>
+        <footer class="row footer">
             <p>Everyday is another oppurtunity to <strong>CHOOSE</strong><br> how we will approach
             <em>Daily Dose</em> is a fun, and guide<br> that empowers us to be gratiful and intentional.<br>
            So we always start our day focused on what matters most.</p>
         </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>       
-        <script type="text/javascript" src="../public/index.js"></script>
+        <script type="text/javascript" src="/home.js"></script>
     </body>
 </html>

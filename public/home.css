@@ -1,6 +1,6 @@
 * {
 box-sizing: border-box;
-font-size: 10px;
+font-size: 16px;
 }
 
 body {
@@ -17,13 +17,12 @@ header {
 }
 
 h1 {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 img {
  
-    max-width: 200px;
-    /* height: 50%; */
+    width: 200px;
     border-radius: 50%
 }
 
@@ -31,14 +30,9 @@ main {
     text-align: center;
 }
 
-footer {
-    text-align: center;
-}
-
 button {
     margin: 5px auto;
     width: 200px;
-    max-width: 400px;
     padding-top: 5px;
     padding-bottom: 5px; 
     border-radius: 5px;
@@ -49,4 +43,76 @@ button:hover {
     cursor: pointer;
     color: white;
     background-color: black;
+}
+
+.footer {
+    text-align: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.counter {
+    display: inline-block;
+    max-width: 200px;
+    background-color: darkgreen;
+    color: paleturquoise;
+    padding: 10px;
+    margin: 10px;
+}
+
+footer p .footer {
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 620px) {
+    img {
+        width: 400px;
+        height: 300px;
+    } 
+
+    footer .footer {
+        margin-top: 15px;
+        width: 400px;
+    }
+}
+
+/* modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 10%;
+    background-color: orange;
+    width: 90%;
+    margin: 10px auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 1000px;
+}
+
+.modal-body {
+    background-color: whitesmoke;
+    /* width: 100%; */
+    color: black;
+    padding-bottom: 50px;
+    margin: 0;
+}
+
+.modal label, input  {
+    margin-bottom: 15px;
+}
+
+.modal header button {
+    width: 25px;
+    display: inline-block;
+}
+
+ .modal form button  {
+    width: 150px;
+    margin: 0 auto 10px 30px;
+}
+
+footer p {
+    text-align: center;
 }
