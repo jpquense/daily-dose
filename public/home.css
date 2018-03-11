@@ -52,14 +52,14 @@ button:hover {
     width: 300px;
 }
 
-.counter {
+/* .counter {
     display: inline-block;
     max-width: 200px;
     background-color: darkgreen;
     color: paleturquoise;
     padding: 10px;
     margin: 10px;
-}
+} */
 
 footer p .footer {
     font-size: 12px;
@@ -71,23 +71,20 @@ footer p .footer {
         height: 300px;
     } 
 
-    footer .footer {
+    .footer {
         margin-top: 15px;
-        width: 400px;
+        width: 600px;
     }
 }
 
 /* modal */
 
 .modal {
-    display: none;
-    position: fixed;
-    top: 10%;
+    position: relative;
     background-color: orange;
     width: 90%;
     margin: 10px auto;
-    left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(0, 0);
     max-width: 1000px;
 }
 
@@ -115,4 +112,29 @@ footer p .footer {
 
 footer p {
     text-align: center;
+}
+
+.list-header {
+    text-align: center;
+}
+
+.grat-list {
+    display: inline-block;
+}
+
+.modal ul {
+    padding: 10px;
+    text-align: left;
+}
+
+.modal hr {
+    border-bottom: 0;
+    margin: 15px 0;
+}
+
+.update, .remove {
+    display: inline-block;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto auto 15px;
 }
