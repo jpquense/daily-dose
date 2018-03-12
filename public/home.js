@@ -90,16 +90,16 @@ function displayGratitudesModal(data) {
         <h2 class="js-modal-header">I am grateful for . . . </h2>
         </header>
         <div class="modal-body">
-            <div class="row">
-                <div class="count col-12">
-                    <h3>Gratitude Count: ${listLength}</h3>
-                </div>
-                <form class="count">
+            <div class="get-all row">
+                <h3 class="col-4">Gratitude Count: ${listLength}</h3>
+                <button class="col-4 js-modal-btn-all" type="submit" ">Get All</button>
+            </div>
+            <form class="get-some row">
                 <label class="col-4" for="gratitudes">How many gratitudes do you want to view?</label>
                 <input class="col-4" type="number" placeholder="1" id="gratitudes" min="1" max="${listLength}">
-                <button class="col-4 js-modal-btn-submit" type="submit" ">Get Gratitudes</button>
-                </form>
-            </div>    
+                <button class="col-4 js-modal-btn-count" type="submit" ">Get Gratitudes</button>
+            </form>
+    
             <div class="js-grat-list grat-list">
             </div>
         </div>
@@ -111,15 +111,12 @@ function displayGratitudesModal(data) {
 }
 
 function displayGratitudesList(data) {
-    console.log('displayGratitudesList ran');
-    
     $('.js-grat-list').html(`
             <h3 class="col-12 list-header">Look how great my life is!</h3>
             <button class="js-modal-btn-close">Close</button>
             <ol class="js-list"></ol>
     `);
     data.gratitudes.forEach((element, index) => {
-        console.log(`<li class="index${index}">I am grateful for ${element.content}</li>`);   
         $('.js-list').append(`
         <li class="index${index}">I am grateful for ${element.content}<button class='update'>Update</button><button class='remove'>Delete</button><hr></li>
         `); 
@@ -146,7 +143,7 @@ $('.modal').on('click', '.js-modal-btn-exit', function() {
     $('.modal').slideUp('fast');
 }); 
 
-$('.modal').on('click', '.js-modal-btn-submit', function() {
+$('.modal').on('click', '.js-modal-btn-all', function() {
     getAndDisplayGratitudesList();
 }); 
 

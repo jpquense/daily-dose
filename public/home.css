@@ -42,7 +42,7 @@ button {
 button:hover {
     cursor: pointer;
     color: white;
-    background-color: black;
+    background-color: darkcyan;
 }
 
 .footer {
@@ -90,24 +90,36 @@ footer p .footer {
 
 .modal-body {
     background-color: whitesmoke;
-    /* width: 100%; */
     color: black;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
     margin: 0;
+}
+
+.modal h2 {
+    padding-top: 10px;
+}
+
+.get-some {
+    padding-top: 15px;
+}
+
+.get-all {
+    padding-top: 20px;
+}
+
+.modal footer {
+    padding-bottom: 1px;
 }
 
 .modal label, input  {
     margin-bottom: 15px;
 }
 
-.modal header button {
-    width: 25px;
-    display: inline-block;
-}
 
- .modal form button  {
-    width: 150px;
-    margin: 0 auto 10px 30px;
+ .modal input  {
+    margin-top: 5px;
+    margin-right: 25px;
+    width: 100px;;
 }
 
 footer p {
