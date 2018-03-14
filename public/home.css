@@ -41,8 +41,7 @@ button {
 
 button:hover {
     cursor: pointer;
-    color: white;
-    background-color: darkcyan;
+    background-color: gainsboro;
 }
 
 .footer {
@@ -51,15 +50,6 @@ button:hover {
     border-radius: 5px;
     width: 300px;
 }
-
-/* .counter {
-    display: inline-block;
-    max-width: 200px;
-    background-color: darkgreen;
-    color: paleturquoise;
-    padding: 10px;
-    margin: 10px;
-} */
 
 footer p .footer {
     font-size: 12px;
@@ -116,7 +106,7 @@ footer p .footer {
 }
 
 
- .modal input  {
+ .modal input[type="number"]  {
     margin-top: 5px;
     margin-right: 25px;
     width: 100px;;
@@ -128,10 +118,15 @@ footer p {
 
 .list-header {
     text-align: center;
+    background-color: lightseagreen;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px
 }
 
 .grat-list {
-    display: inline-block;
+    margin: 30px;
 }
 
 .modal ul {
@@ -141,12 +136,37 @@ footer p {
 
 .modal hr {
     border-bottom: 0;
-    margin: 15px 0;
+    margin: 10px 0 20px 0;
 }
 
-.update, .remove {
+/* .update, .remove {
     display: inline-block;
     cursor: pointer;
     width: 100px;
     margin: 0 auto auto 15px;
+} */
+
+.modal .add-items {
+    background-color: lightseagreen;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.modal .form-control {
+    padding: 4px;
+    margin-top: 20px;
+}
+
+.modal .form-input {
+    padding: 4px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.js-list li {
+    padding: 0 5px 0 0;
+}
+
+.modal buttons {
+    width: 200px;
 }

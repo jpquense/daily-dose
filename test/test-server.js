@@ -13,7 +13,7 @@ chai.use(chaiHttp);
 
 // integration test for http calls
 // test GET request to see if 200 status is returned and index.html
-describe('index.html page', function(){
+describe('home.html page', function(){
     before(function() {
         return runServer();
     });
@@ -31,16 +31,16 @@ describe('index.html page', function(){
 });
 
 // test GET request to '/gratitude-list.html see if 200 status and gratitude-list.html are served
-describe('gratitude-list.html page', function(){
+describe('gratitudes.html page', function(){
     before(function() {
         return runServer();
     });
     after(function() {
         return closeServer();
     });
-    it('should serve gratitude-list.html', function() {
+    it('should serve gratitudes.html', function() {
         return chai.request(app)
-            .get('/gratitude-list')
+            .get('/gratitudes')
             .then(function(res) {
                 expect(res).to.have.status(200);
                 expect(res).to.be.html;
@@ -49,16 +49,16 @@ describe('gratitude-list.html page', function(){
 });
 
 // test GET request to '/day-plan.html see if 200 status is returned and day-plan.html
-describe('day-plan.html page', function(){
+describe('goals.html page', function(){
     before(function() {
         return runServer();
     });
     after(function() {
         return closeServer();
     });
-    it('should serve day-plan.html', function() {
+    it('should serve goals.html', function() {
         return chai.request(app)
-            .get('/day-plan')
+            .get('/goals')
             .then(function(res) {
                 expect(res).to.have.status(200);
                 expect(res).to.be.html;
@@ -67,16 +67,16 @@ describe('day-plan.html page', function(){
 });
 
 // test GET request to '/love-notes.html see if 200 status and love-notes.html are served
-describe('love-notes.html page', function(){
+describe('signup.html page', function(){
     before(function() {
         return runServer();
     });
     after(function() {
         return closeServer();
     });
-    it('should serve love-notes.html', function() {
+    it('should serve signup.html', function() {
         return chai.request(app)
-            .get('/love-notes')
+            .get('/signup')
             .then(function(res) {
                 expect(res).to.have.status(200);
                 expect(res).to.be.html;
@@ -84,17 +84,17 @@ describe('love-notes.html page', function(){
     });
 });
 
-// test GET request to '/love-notes.html see if 200 status and love-notes.html are served
-describe('meditation.html page', function(){
+// test GET request to / see if 200 status and love-notes.html are served
+describe('/', function(){
     before(function() {
         return runServer();
     });
     after(function() {
         return closeServer();
     });
-    it('should serve meditation.html', function() {
+    it('should serve login.html', function() {
         return chai.request(app)
-            .get('/meditation')
+            .get('/')
             .then(function(res) {
                 expect(res).to.have.status(200);
                 expect(res).to.be.html;
