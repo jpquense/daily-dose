@@ -3,40 +3,30 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
-const RecipesSchema = new mongoose.Schema({
-    name: {
+const gratitudesSchema = new mongoose.Schema({
+    gratitude: {
         type: String,
         unique: true,
         required: true,
     },
-    ingredients: [{
-        _id: false,
-        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredients' },
-        quantity: { type: String },
-    }],
+    date: {
+        type: Date,
+        unique: false,
+        required: true,
+    },
+  
 }, {
     timestamps: true,
 });
 
-RecipesSchema.plugin(uniqueValidator);
+gratitudesSchema.plugin(uniqueValidator);
 
-restaurantSchema.virtual('addressString').get(function() {
-  return `${this.address.building} ${this.address.street}`.trim();});
-
-restaurantSchema.methods.serialize = function() {
-
+gratitudesSchema.methods.serialize = function() {
   return {
     id: this._id,
-    name: this.name,
-    cuisine: this.cuisine,
-    borough: this.borough,
-    grade: this.grade,
-    address: this.addressString
+    gratitude: this.gratitude,
+    date: this.date
   };
 };
 
-// note that all instance methods and virtual properties on our
-// schema must be defined *before* we make the call to `.model`.
-const Restaurant = mongoose.model('Restaurant', restaurantSchema);
-
-module.exports = {Restaurant};
+module.exports = mongoose.model('Gratitudes', gratitudesSchema);

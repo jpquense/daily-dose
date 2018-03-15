@@ -4,25 +4,25 @@ const MOCK_GRATITUDES = {
 	"gratitudes": [
         {
             "id": "1111111",
-            "content": "I am grateful for my friend taking me out to lunch.",
+            "gratitude": "I am grateful for my friend taking me out to lunch.",
             "publishedAt": 1470016976609,
             "date": "2017-04-01"
         },
         {
             "id": "222222",
-            "content": "I am grateful for my friend taking me out to lunch.",
+            "gratitude": "I am grateful for my friend taking me out to lunch.",
             "publishedAt": 1470016976609,
             "date": "2017-04-20"
         },
         {
             "id": "333333",
-            "content": "I am grateful for my friend taking me out to lunch.",
+            "gratitude": "I am grateful for my friend taking me out to lunch.",
             "publishedAt": 1470016976609,
             "date": "2017-04-28"
         },
         {
             "id": "4444444",
-            "content": "I am grateful for my friend taking me out to lunch.",
+            "gratitude": "I am grateful for my friend taking me out to lunch.",
             "publishedAt": 1470016976609,
             "date": "2017-04-30"
         }
@@ -38,9 +38,21 @@ const MOCK_GRATITUDES = {
 
 // GET client side ajax call
 function getGratitudes(callbackFN) {
-    // we use a `setTimeout` to make this asynchronous
-    // as it will be with a real ajax call.
-        setTimeout(function() { callbackFN(MOCK_GRATITUDES)}, 100);
+    $.ajax({
+    	url: `https://your-api-url.com/api/posts/${postId}`,
+    	method: 'PUT',
+      data: {
+      	title,
+        text,
+        author,
+      },
+      success: () => {
+      	console.log('Works!')
+      },
+      error: () => {
+      	console.log('I get an error :/')
+      }
+    })
 }
 
 // POST client side ajax call
@@ -58,7 +70,7 @@ function putGratitudes(callbackFN) {
 }
 
 // DELETE client side ajax call
-function putGratitudes(callbackFN) {
+function deleteGratitudes(callbackFN) {
     // we use a `setTimeout` to make this asynchronous
     // as it will be with a real ajax call.
         setTimeout(function() { callbackFN(MOCK_GRATITUDES)}, 100);
@@ -120,10 +132,10 @@ function displayGratitudesList(data) {
     data.gratitudes.forEach((element, index) => {
         const date = element.date;
         const id = element.id;
-        const content = element.content
+        const gratitude = element.gratitude
         console.log(date, id, content);
         $('.js-list').append(`
-        <li class="" data-index="${index}" data-id="${id}">I am grateful for ${element.content} <br>${date}
+        <li class="" data-index="${index}" data-id="${id}">I am grateful for ${gratitude} <br>${date}
             <div>
                 <button class="js-update-btn">Update</button>
                 <button>Delete</button>
