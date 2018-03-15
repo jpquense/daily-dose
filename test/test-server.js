@@ -2,12 +2,18 @@
 
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const {app, runServer, closeServer} = require('../server');
+const faker = require('faker');
+const mongoose = require('mongoose');
 
+// this makes the expect syntax available throughout
+// this module
 const expect = chai.expect;
 
-chai.use(chaiHttp);
+const {Restaurant} = require('../models');
+const {app, runServer, closeServer} = require('../server');
+const {TEST_DATABASE_URL} = require('../config');
 
+chai.use(chaiHttp);
 // small code test or individual functions
 // const functiontotest = require('../server');
 
